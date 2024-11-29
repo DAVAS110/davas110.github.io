@@ -772,7 +772,8 @@ label {
 @media screen and (max-width: 500px) {
   /* Home */
   .section__container-home {
-    padding: 3.5em 1em 0 1em;
+    height: 100%;
+    padding: 3.5em 1em 1.5em 1em;
   }
 
   .front__title {
@@ -791,6 +792,7 @@ label {
 
   /* About me */
   .section__container-aboutMe {
+    height: 100%;
     padding: 3.5em 1.5em 0 1.5em;
   }
 
@@ -836,10 +838,12 @@ label {
 
   /*Projects*/
   .section__container-projects {
+    height: 100%;
     padding: 3.5em 1em 0 1em;
   }
 
   .container-projects {
+    
     padding: 0em;
   }
 
