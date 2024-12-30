@@ -34,7 +34,7 @@ const SwiperComponent = () => {
       >
         {projectsData.map(({ name, description, color, href, img, index }) => (
           <SwiperSlide key={index}>
-            <div className="m-32 flex items-center justify-around lg:flex-nowrap flex-wrap gap-10">
+            <div className="lg:m-32 my-32 mx-10 flex items-center justify-around lg:flex-nowrap flex-wrap gap-10">
               <div className="flex w-[40em] flex-col gap-y-14">
                 <div className="flex flex-col gap-2">
                   <h2 className="font-RobotoSlabBold text-8xl">{name}</h2>

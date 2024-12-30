@@ -96,7 +96,7 @@ main {
     height: 100% !important;
   }
   .swiper-slide img {
-    width: 35em !important;
+    width: 45em !important;
     height: 20em !important;
     object-fit: cover;
   }
