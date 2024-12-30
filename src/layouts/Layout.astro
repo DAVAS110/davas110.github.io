@@ -1,0 +1,32 @@
+---
+import Starfield from "../components/starfield.astro";
+import { ViewTransitions } from "astro:transitions";
+import Header from "../components/header.astro";
+
+import "../styles/global.css";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body class="z-10 flex flex-col text-base">
+    <Starfield />
+    <Header />
+    <slot />
+  </body>
+</html>

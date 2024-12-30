@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import { aquaSyncData } from "../data/aquaSyncData";
+
+import Back from "../components/buttons/back.astro";
+import Tags from "../components/Tags/Tags.astro";
+import Figma from "../components/buttons/figma.astro";
+import Github from "../components/buttons/github.astro";
+---
+
+<Layout title="AquaSync">
+  <section
+    class="z-20 mx-auto mt-56 flex w-full max-w-[108rem] items-start justify-start text-white lg:p-0 p-10"
+  >
+    <div class="flex flex-col gap-9">
+      <Back />
+      <h2 class="font-RobotoSlabBold text-white lg:text-6xl text-5xl">Aqua Sync</h2>
+      <div class="flex gap-4 flex-wrap">
+        {
+          aquaSyncData.map(({ name, svg, bgColor, textColor }) => (
+            <Tags
+              name={name}
+              svg={svg}
+              bgColor={bgColor}
+              textColor={textColor}
+            />
+          ))
+        }
+      </div>
+      <p class="font-RobotoSlabRegular text-white lg:text-2xl text-xl">
+        Eaton Website is a solution that enables the connection of the Eaton
+        Easy E4 device with a website through the Eaton PLC API. It facilitates
+        the integration and remote control of the Eaton Easy E4 to efficiently
+        monitor and manage processes.
+      </p>
+      <p class="font-RobotoSlabRegular text-white lg:text-2xl text-xl">
+        Displays in real-time the status of the digital or analog inputs and
+        outputs of the Eaton PLC. It is adapted for a specific functionality,
+        but the foundational principles remain the same (Works only in a local
+        environment).
+      </p>
+      <p class="font-RobotoSlabRegular italic text-white text-xl">
+        It is based on a fully customizable competition project.
+      </p>
+      <div class="flex items-center justify-start gap-4">
+        <Github
+          href="https://github.com/DAVAS110/AquaSync"/>
+        <Figma
+          href="https://www.figma.com/design/cneURZm6JAoF2kEUfTl9MQ/Eaton-Project-by-David?node-id=0-1&t=nrLidMh9c9Qsb3sz-1"
+        />
+      </div>
+    </div>
+  </section>
+</Layout>

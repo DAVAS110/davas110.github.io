@@ -1,0 +1,44 @@
+---
+import profile from "../img/aboutme/about-me-profile.webp";
+
+import Tags from "../components/Tags/Tags.astro";
+
+import { aboutMeTechData } from "../data/aboutMeTechData.ts";
+---
+
+<section
+  class="mx-auto grid min-h-dvh max-w-[108rem] grid-cols-1 place-content-center place-items-center gap-5 lg:p-0 p-10"
+>
+  <picture
+    class="flex items-center justify-center rounded-full border-4 border-white"
+  >
+    <img
+      class="size-36 h-[10em] w-[10em] rounded-full p-2 duration-300 md:size-80"
+      src={profile.src}
+      alt=""
+    />
+  </picture>
+  <div class="grid grid-cols-1 place-content-center place-items-center gap-5">
+    <p
+      class="font-RobotoSlabBold font-bold tracking-wide text-white text-4xl md:text-5xl"
+    >
+      Hi, I'm David! 👋
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-3 text-white">
+      {
+        aboutMeTechData.map(({ name, svg, bgColor, textColor }) => (
+          <Tags name={name} svg={svg} bgColor={bgColor} textColor={textColor} />
+        ))
+      }
+    </div>
+    <p
+      class="text-center font-light tracking-wide text-white text-xl md:text-2xl"
+    >
+      Passionate about learning, technology, and the world of software
+      development and electronics. I develop web and mobile applications. As a
+      student of electronics, I work on IoT projects, industrial control, and
+      electronics projects. I always enjoy taking on new projects and learning
+      new technologies to enhance my skills.
+    </p>
+  </div>
+</section>

@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+body {
+  width: 100%;
+  background-color: #000;
+}
+
+main {
+  align-self: center;
+}
+
+@font-face {
+  font-family: "OrganicRelief";
+  src: url("../assets/fonts/OrganicRelief.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoSlabBold";
+  src: url("../assets/fonts/RobotoSlabBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "RobotoSlabRegular";
+  src: url("../assets/fonts/RobotoSlabRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.swiper-slide-shadow-left,
+.swiper-slide-shadow-right {
+  display: none;
+}
+
+.slider-controler {
+  position: relative;
+  display: flex;
+  align-items: center;
+  bottom: 3em;
+  justify-content: center;
+}
+
+.slider-controler .swiper-button-next {
+  left: 58% !important;
+  transform: translateX(-58%) !important;
+}
+
+.slider-controler .slider-arrow {
+  color: white;
+  width: 10rem;
+  height: 5rem;
+  left: 42%;
+  transform: translateX(-42%);
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.slider-controler .slider-arrow::after {
+  content: "";
+}
+
+.swiper-pagination {
+  position: relative;
+  width: 15rem !important;
+}
+
+.swiper-pagination .swiper-pagination-bullet {
+  background: #fff;
+  filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+}
+
+.swiper-pagination .swiper-pagination-bullet-active {
+  background: #fff;
+}
+
+@media (max-width: 1024px) {
+  .swiper_container {
+    height: 100%;
+    width: 100%;
+  }
+  .swiper-slide {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  .swiper-slide img {
+    width: 35em !important;
+    height: 20em !important;
+    object-fit: cover;
+  }
+  .slider-controler {
+    bottom: 7em;
+  }
+  .slider-controler .slider-arrow {
+    left: 24%;
+  }
+  .slider-controler .swiper-button-next {
+    left: 75% !important;
+  }
+}

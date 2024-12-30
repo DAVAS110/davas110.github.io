@@ -1,0 +1,17 @@
+---
+import webiste from '../svg/website.svg';
+
+interface Props {
+  href: string;
+}
+
+const { href } = Astro.props;
+---
+
+<a
+  href={href}
+  target="_blank"
+  class="flex h-full w-[4em] gap-4 rounded-xl bg-white px-5 py-2 hover:opacity-70"
+>
+    <img src={webiste.src} loading="lazy" />
+</a>

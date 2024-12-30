@@ -1,0 +1,18 @@
+---
+import Github from "./buttons/github-astro.astro";
+const Logo = "<Portfolio />";
+---
+
+<header
+  class="h-30 fixed z-40 flex w-full items-center justify-center text-white lg:p-0 p-10"
+>
+  <nav
+    class="p-x-[1rem] p-y-[2rem] mx-auto flex h-auto min-h-[7rem] w-full max-w-[108rem] flex-wrap items-end justify-between bg-transparent"
+  >
+    <a href="/" class="font-serif text-xl bg-[rgba(0,0,0,0.2)] rounded-md px-5 py-2 hover:opacity-70 z-50 backdrop-blur-sm"><span>{Logo}</span></a>
+    <Github
+      title={"Take a look at Github"}
+      href={"https://github.com/DAVAS110"}
+    />
+  </nav>
+</header>

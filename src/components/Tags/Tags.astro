@@ -1,0 +1,11 @@
+---
+const { name, svg, bgColor, textColor } = Astro.props;
+---
+
+<span
+  style={{ backgroundColor: bgColor }}
+  class="inline-flex h-14 items-center gap-2 rounded-full px-6"
+>
+  {!svg ? <span></span>: <img src={svg} alt={name} loading="lazy" />}
+  <span style={{ color: textColor }} class="font-semibold">{name}</span>
+</span>

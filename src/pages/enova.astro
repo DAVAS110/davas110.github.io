@@ -1,0 +1,40 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+import { enovaData } from "../data/enovaData.ts";
+import Github from "../components/buttons/github.astro";
+import Back from "../components/buttons/back.astro";
+import Tags from '../components/Tags/Tags.astro';
+---
+
+<Layout title="Enova">
+  <section
+    class="z-30 mx-auto mt-56 flex w-full max-w-[108rem] items-start justify-start text-white lg:p-0 p-10"
+  >
+    <div class="flex flex-col gap-9">
+      <Back />
+      <h2 class="font-RobotoSlabBold text-white lg:text-6xl text-5xl">Enova</h2>
+      <div class="flex gap-4 flex-wrap">
+        {enovaData.map(({ name, svg, bgColor, textColor, index }) => (
+          <Tags
+                name={name}
+                svg={svg}
+                bgColor={bgColor}
+                textColor={textColor}
+              />
+        ))}
+      </div>
+      <p class="font-RobotoSlabRegular text-white lg:text-2xl text-xl">
+        Enova is a mobile application developed with React Native, aimed at
+        promoting and facilitating recycling through the use of advanced
+        technologies. The app integrates the Chat GPT API to provide an
+        interactive and informative chat experience about recycling practices,
+        as well as the Google Cloud Vision API to identify and classify
+        recyclable objects using vision technology.
+      </p>
+      <Github
+        href="https://github.com/DAVAS110/Enova"
+      />
+    </div>
+  </section>
+</Layout>
