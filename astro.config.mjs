@@ -5,5 +5,5 @@ import react from "@astrojs/react";
 
 export default defineConfig({
   integrations: [tailwind(), react()],
-  output: "hybrid"
+  site: 'https://davas110.github.io',
 });
