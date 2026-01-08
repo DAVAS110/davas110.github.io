@@ -12,6 +12,22 @@ export interface Project {
   index: number;
 }
 
+export interface WorkExperience {
+  company: string;
+  role: string;
+  period: string;
+  description: string;
+  img: string;
+  index: number;
+}
+
+export interface education {
+  degree: string;,
+  institution: string;
+  img: string;
+  index: number;
+}
+
 export interface Tech {
   name: string;
   svg: unknown;

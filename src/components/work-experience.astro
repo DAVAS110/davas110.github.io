@@ -1,0 +1,65 @@
+---
+import {WorkExperienceData} from "../data/WorkExperienceData.ts";
+import {educationData} from "../data/educationData.ts";
+---
+
+<section
+    class="place-items-center mx-auto grid max-w-[108rem] grid-cols-1 gap-20 lg:gap-0 lg:grid-cols-2 lg:place-items-between"
+>
+    <div class="flex flex-col place-content-start place-items-start h-full lg:h-[50em] p-10 lg:p-0 gap-5 lg:gap-0">
+        <h2
+            class="font-RobotoSlabBold font-bold tracking-wide text-white text-2xl md:text-4xl"
+        >
+            Work experience
+        </h2>
+
+        <div class="flex flex-col items-start justify-center gap-5 h-full">
+            {WorkExperienceData.map(({company, role, period, description, img, index}) => ( 
+            <p class="text-[#828282] text-lg">{period}</p>
+            <h2
+                class="font-RobotoSlabBold font-bold tracking-wide text-white text-xl lg:text-2xl"
+            >
+                {role}
+            </h2>
+            <div
+                class="flex flex-col gap-3 md:gap-5 lg:flex-row lg:items-center lg:gap-10"
+            >
+                <div
+                    class="flex h-20 w-20 items-center justify-center overflow-hidden rounded-xl bg-white"
+                >
+                    <img
+                        src={img}
+                        alt="Experian Logo"
+                        class="h-full w-full object-contain"
+                    />
+                </div>
+                <p
+                    class="font-RobotoSlabRegular tracking-wide text-[3em] text-white md:text-2xl"
+                >
+                    <span class="font-bold text-xl md:text-2xl">{company}</span>
+                </p>
+            </div>
+            <p class=" text-white text-base md:text-lg">
+                {description}
+            </p>
+        ))}
+        </div>
+    </div>
+
+    <div class="flex place-items-start place-content-start w-full p-10 lg:p-0 lg:place-content-start gap-5 lg:gap-0 lg:place-items-center flex-col h-[35em] lg:h-[50em]">
+        <h2
+            class="font-RobotoSlabBold font-bold tracking-wide text-white text-2xl md:text-4xl"
+        >
+            Education
+        </h2>
+        <div class="flex flex-col items-start justify-start gap-2 lg:gap-5 min-h-10 lg:h-full lg:items-center lg:justify-center">
+            {educationData.map(({degree, institution, img, index}) => ( 
+                <div class="flex h-36 w-36 items-center justify-center overflow-hidden rounded-xl bg-white">
+                    <img src={img} alt="Fidelitas Logo" class="h-full w-full object-contain" />
+                </div>
+                <h2 class="font-RobotoSlabBold text-white text-lg md:text-2xl">{degree}</h2>
+                <p class="text-[#828282] text-base md:text-lg">{institution}</p>
+            ))}
+        </div>
+    </div>
+</section>

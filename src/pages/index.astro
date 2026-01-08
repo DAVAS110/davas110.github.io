@@ -1,8 +1,9 @@
 ---
-import Projects from "../components/projects.astro";
-import Intro from "../components/intro.astro";
 import Layout from "../layouts/Layout.astro";
+import Intro from "../components/intro.astro";
 import AboutMe from '../components/about-me.astro';
+import Projects from "../components/projects.astro";
+import WorkExperience from "../components/work-experience.astro";
 
 import "@fontsource-variable/inter";
 import "../styles/index.css";
@@ -12,6 +13,7 @@ import "../styles/index.css";
   <main class="h-full w-full self-center max-w-[117.8rem]" transition:animate="fade">
     <Intro />
     <AboutMe />
+    <WorkExperience />
     <Projects />
   </main>
 </Layout>

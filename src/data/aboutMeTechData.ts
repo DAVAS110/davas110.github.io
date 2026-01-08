@@ -1,12 +1,14 @@
 import Html from '../components/svg/html.svg'
 import node from '../components/svg/node.svg'
+import Java from '../components/svg/java.svg'
 import Figma from '../components/svg/figma.svg'
+import Linux from '../components/svg/linux.svg'
 import Astro from '../components/svg/astro.svg'
-import Python from '../components/svg/python.svg'
+import MySQL from '../components/svg/mysql.svg'
 import Github from '../components/svg/github.svg'
+import Python from '../components/svg/python.svg'
 import SvgReact from '../components/svg/react.svg'
 import mongoDB from '../components/svg/mongoDB.svg'
-import Arduino from '../components/svg/arduino.svg'
 import Postman from '../components/svg/postman.svg'
 import Tailwind from '../components/svg/tailwindcss.svg'
 import JavaScript from '../components/svg/javascript.svg'
@@ -39,7 +41,7 @@ export const aboutMeTechData: Tech[] = [
     name: "MongoDB",
     svg: mongoDB.src,
     bgColor: "#fff",
-    textColor: "#000",
+    textColor: "#539E43",
     index: 4,
   },
   {
@@ -85,13 +87,6 @@ export const aboutMeTechData: Tech[] = [
     index: 10,
   },
   {
-    name: "Arduino",
-    svg: Arduino.src,
-    bgColor: "#fff",
-    textColor: "#000",
-    index: 11,
-  },
-  {
     name: "Tailwindcss",
     svg: Tailwind.src,
     bgColor: "#32547f",
@@ -112,4 +107,25 @@ export const aboutMeTechData: Tech[] = [
     textColor: "#fff",
     index: 14,
   },
+  {
+    name: "Linux",
+    svg: Linux.src,
+    bgColor: "#fff",
+    textColor: "#000",
+    index: 15,
+  },
+  {
+    name: "Java",
+    svg: Java.src,
+    bgColor: "#7f4932",
+    textColor: "#fff",
+    index: 16,
+  },
+  {
+    name: "MySQL",
+    svg: MySQL.src,
+    bgColor: "#fff",
+    textColor: "#00546B",
+    index: 11,
+  }
 ];
