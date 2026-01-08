@@ -1,5 +1,5 @@
 import Experian from "../img/WorkExperience/Experian.webp";
-import Intel from "../img/WorkExperience/Intel.webp";
+import Intel from "../img/WorkExperience/intel.webp";
 
 
 import type { WorkExperience } from '../types.ts';
